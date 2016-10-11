@@ -1,4 +1,4 @@
-
+var color = " "
 
 function time(){
 
@@ -19,13 +19,22 @@ function time(){
 		s = '0'+s;
 	}
 
-	var timeNow = h + ':' + m + ':' + s;
+	color = '#' + h + m + s;
 
-	console.log(timeNow)
+	// console.log(color)
 
-	document.getElementById('clock').innerHTML = timeNow;
+	document.getElementById('clock').innerHTML = color;
+	document.body.style.backgroundColor = color;
 }
+
+// console.log(color)
+
+// function backgroundColor(){
+// 	console.log(color);
+// 	document.body.style.backgroundColor = color;
+// }
 
 setInterval(function(){
 	time()
 },1000)
+
